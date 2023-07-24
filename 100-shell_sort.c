@@ -58,6 +58,11 @@ void shell_sort(int *array, size_t size)
 
 	while (gap < size / 3)
 	{
+		gap *= 3;
+		gap += 1;
+	}
+	while (gap >= 1)
+	{
 		gap_sheel_sort(array, size, gap);
 		gap = (gap - 1) / 3;
 		print_array(array, size);
